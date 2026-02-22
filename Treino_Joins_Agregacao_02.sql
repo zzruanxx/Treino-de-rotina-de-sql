@@ -99,3 +99,8 @@ JOIN (
   GROUP BY i.pedido_id
 ) t ON t.pedido_id = p.id
 ORDER BY t.total_calculado DESC;
+
+
+SELECT i.pedido_id, SUM(i.quantidade)
+FROM itens_pedido i
+GROUP BY i.pedido_id;
